@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
+import HomeContainer from '../pages/Home/HomeContainer.jsx'
+import data from '../api.json'
 
-const $app = document.getElementById('app')
+const $homeContainer = document.getElementById('home-container')
 
-const helloWorld = <h1>Hello World!</h1>
-
-render(helloWorld, $app)
+render(<HomeContainer data={data} />, $homeContainer)

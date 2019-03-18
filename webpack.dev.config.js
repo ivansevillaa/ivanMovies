@@ -1,10 +1,10 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const plugins = [
-  new MiniCssExtractPlugin({
-    filename: "css/[name].css",
-    chunkFilename: "[id].css"
-  })
+  // new MiniCssExtractPlugin({
+  //   filename: "css/[name].css",
+  //   chunkFilename: "[id].css"
+  // })
 ]
 
 module.exports = {
@@ -24,20 +24,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader'
         }
       },
       {
         test: /\.css$/,
-        use: [{
-          loader: MiniCssExtractPlugin.loader,
-        },
-          'css-loader',
-          'style-loader'
-        ]
+        // use: [{
+        //   loader: MiniCssExtractPlugin.loader,
+        // },
+        // ]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(jpg|png|gif|svg)$/,

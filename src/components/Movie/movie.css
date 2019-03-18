@@ -1,0 +1,29 @@
+.Movie {
+    cursor: pointer;
+    margin-right: 15px;
+    display: inline-block;
+    width: 230px;
+    vertical-align: top;
+}
+
+.Movie-cover {
+    transition: .5s;
+    box-shadow: 0px 0 5px (255,255,255,.3);
+    height: 130px;
+}
+
+.Movie:hover .Movie-cover {
+    box-shadow: 0 0 10px rgba(255,255,255,.3);
+}
+
+.Movie-image {
+    object-fit: cover;
+}
+
+.Movie-title {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    white-space: normal;
+    font-weight: 500
+}

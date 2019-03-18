@@ -1,0 +1,490 @@
+body {
+    margin: 0;
+    background: #141414;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Home {
+    margin: 0 auto;
+    min-height: 100vh;
+}
+.Movie {
+    cursor: pointer;
+    margin-right: 15px;
+    display: inline-block;
+    width: 230px;
+    vertical-align: top;
+}
+
+.Movie-cover {
+    transition: .5s;
+    box-shadow: 0px 0 5px (255,255,255,.3);
+    height: 130px;
+}
+
+.Movie:hover .Movie-cover {
+    box-shadow: 0 0 10px rgba(255,255,255,.3);
+}
+
+.Movie-image {
+    object-fit: cover;
+}
+
+.Movie-title {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    white-space: normal;
+    font-weight: 500
+}
+.Playlist {
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    padding-bottom: 50px;
+}
+.Category {
+    margin: 19px; 
+}
+
+.Category-title {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.Categories {
+    overflow: hidden;
+    padding: 10px 0 20px;
+    position: absolute;
+    top: 68px;
+    width: 100%;
+}
+.Header {
+    background: #141414;
+    width: 100%;
+    height: 68px;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    justify-content: space-between
+}
+
+.Header-logo {
+    margin-right: 30px;
+}
+
+.Header-title {
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 0;
+    margin-left: 20px; 
+    text-shadow: 0 0 10px rgba(255,255,255,.1);
+    display: flex;
+    align-items: center;
+}
+
+.Header-title:hover {
+    text-shadow: 0 0 10px rgba(255,255,255,.2);
+}
+
+.Header-title strong {
+    color: #e50914;
+    font-size: 32px;
+}
+.Search {
+    width: 300px;
+    margin-right: 20px;
+    display: flex;
+    border: 1px solid white;
+    padding: 10px;
+    align-items: center;
+}
+
+.Search-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Search-input {
+    background: #141414;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    outline: 0;
+}
+
+.Search-icon {
+    margin-right: 10px;
+}
+
+.Modal {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100px;
+    background:  #141414;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255,255,255,.4);
+}
+
+.Modal-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 25px;
+    top: 12px;
+    z-index: 3;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.Modal-close:after {
+    content: "X";
+    font-weight: bold;
+    font-size: 30px;
+}
+.RegularError {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    color: white
+}
+
+.RegularError-messagge {
+    z-index: 2;
+    margin: auto;
+    text-align: center;
+}
+
+.RegularError h1 {
+    display: block;
+    font-size: 32px
+}
+.RegularError p {
+    display: block;
+    font-size: 20px
+}
+.VideoPlayer {
+  width: 100%;
+  position: relative;
+  background: black;
+  z-index: 3;
+}
+.Video{
+    width: inherit;
+}
+.Video video{
+    width: inherit;
+    vertical-align: middle;
+}
+.Title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    padding: 10px 20px;
+}
+
+.Title h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+.PlayPause {
+    width: 50px;
+    height: 50px;
+}
+.PlayPause button{
+    height: inherit;
+    border: none;
+    background: transparent;
+    outline: 0;
+    width: inherit;
+    box-sizing: none;
+    font-size: 30px;
+    cursor: pointer; 
+    padding: 0;
+}
+.Timer {
+    font-size: 14px;
+    color: white;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center;
+}
+.Timer p {
+    margin: 0;
+}
+.Controls{
+    display: flex;
+    position: absolute;
+    background: rgba(0,0,0, .7);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0 10px;
+}
+.ProgressBar input[type=range] {
+	height: 25px;
+	-webkit-appearance: none;
+	margin: 10px 0;
+	width: 100%;
+  }
+.ProgressBar  input[type=range]:focus {
+	outline: none;
+}
+.ProgressBar  input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #E50914;
+	border-radius: 10px;
+	border: 1px solid #000000;
+}
+.ProgressBar  input[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 0px 0px #000000;
+	border: 1px solid #000000;
+	height: 18px;
+	width: 18px;
+	border-radius: 25px;
+	background: #E50914;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -7.5px;
+}
+.ProgressBar  input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #E50914;
+}
+.ProgressBar  input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #E50914;
+	border-radius: 10px;
+	border: 1px solid #000000;
+}
+.ProgressBar  input[type=range]::-moz-range-thumb {
+	box-shadow: 0px 0px 0px #000000;
+	border: 1px solid #000000;
+	height: 18px;
+	width: 18px;
+	border-radius: 25px;
+	background: #E50914;
+	cursor: pointer;
+}
+.ProgressBar  input[type=range]::-ms-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+.ProgressBar  input[type=range]::-ms-fill-lower {
+	background: #E50914;
+	border: 1px solid #000000;
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px #000000;
+}
+.ProgressBar  input[type=range]::-ms-fill-upper {
+	background: #E50914;
+	border: 1px solid #000000;
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px #000000;
+}
+.ProgressBar  input[type=range]::-ms-thumb {
+	margin-top: 1px;
+	box-shadow: 0px 0px 0px #000000;
+	border: 1px solid #000000;
+	height: 18px;
+	width: 18px;
+	border-radius: 25px;
+	background: #E50914;
+	cursor: pointer;
+}
+.ProgressBar  input[type=range]:focus::-ms-fill-lower {
+	background: #E50914;
+}
+.ProgressBar  input[type=range]:focus::-ms-fill-upper {
+	background: #E50914;
+}
+
+.ProgressBar{
+	display: flex;
+	flex: 1;
+	align-items: center;
+}
+.ProgressBar input{
+	width: 100%;
+	background: transparent;
+}
+.Spinner img {
+    height: 50px;
+    width: 50px;
+}
+
+.Spinner {
+    position: absolute;
+    top: 0;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.Spinner span {
+    color: white;
+    font-size: 20px;
+}
+.Volume input[type=range] {
+	/* height: 25px; */
+	-webkit-appearance: none;
+	margin: 10px 0;
+	/* width: 100%; */
+}
+.Volume  input[type=range]:focus {
+	outline: none;
+}
+.Volume  input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #E50914;
+	border-radius: 10px;
+	border: 1px solid #000000;
+}
+.Volume  input[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 0px 0px #000000;
+	border: 1px solid #000000;
+	height: 18px;
+	width: 18px;
+	border-radius: 25px;
+	background: #E50914;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -7.5px;
+}
+.Volume  input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #E50914;
+}
+.Volume  input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #E50914;
+	border-radius: 10px;
+	border: 1px solid #000000;
+}
+.Volume  input[type=range]::-moz-range-thumb {
+	box-shadow: 0px 0px 0px #000000;
+	border: 1px solid #000000;
+	height: 18px;
+	width: 18px;
+	border-radius: 25px;
+	background: #E50914;
+	cursor: pointer;
+}
+.Volume  input[type=range]::-ms-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+.Volume  input[type=range]::-ms-fill-lower {
+	background: #E50914;
+	border: 1px solid #000000;
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px #000000;
+}
+.Volume  input[type=range]::-ms-fill-upper {
+	background: #E50914;
+	border: 1px solid #000000;
+	border-radius: 20px;
+	box-shadow: 0px 0px 0px #000000;
+}
+.Volume  input[type=range]::-ms-thumb {
+	margin-top: 1px;
+	box-shadow: 0px 0px 0px #000000;
+	border: 1px solid #000000;
+	height: 18px;
+	width: 18px;
+	border-radius: 25px;
+	background: #E50914;
+	cursor: pointer;
+}
+.Volume  input[type=range]:focus::-ms-fill-lower {
+	background: #E50914;
+}
+.Volume  input[type=range]:focus::-ms-fill-upper {
+	background: #E50914;
+}
+
+.Volume {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: 0;
+    position: relative;
+}
+  
+.Volume-range {
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    height: 50px;
+    display: none;
+    background: rgba(0,0,0,.7);
+    padding-right: 20px;
+}
+.Volume input {
+    cursor: grab;
+    background: transparent;
+}
+  
+.Volume:hover .Volume-range {
+    display: flex;
+}
+.FullScreen {
+    align-items: center;
+    display: flex;
+    padding: 0 10px;
+    cursor: pointer;
+}
+

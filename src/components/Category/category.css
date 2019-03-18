@@ -1,0 +1,11 @@
+.Category {
+    margin: 19px; 
+}
+
+.Category-title {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}

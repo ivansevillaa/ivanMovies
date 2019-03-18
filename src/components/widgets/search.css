@@ -1,0 +1,27 @@
+.Search {
+    width: 300px;
+    margin-right: 20px;
+    display: flex;
+    border: 1px solid white;
+    padding: 10px;
+    align-items: center;
+}
+
+.Search-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Search-input {
+    background: #141414;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    outline: 0;
+}
+
+.Search-icon {
+    margin-right: 10px;
+}

@@ -1,0 +1,6 @@
+.VideoPlayer {
+  width: 100%;
+  position: relative;
+  background: black;
+  z-index: 3;
+}

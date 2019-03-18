@@ -1,0 +1,20 @@
+.Spinner img {
+    height: 50px;
+    width: 50px;
+}
+
+.Spinner {
+    position: absolute;
+    top: 0;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.Spinner span {
+    color: white;
+    font-size: 20px;
+}

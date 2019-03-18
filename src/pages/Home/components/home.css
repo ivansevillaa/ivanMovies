@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    background: #141414;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Home {
+    margin: 0 auto;
+    min-height: 100vh;
+}
