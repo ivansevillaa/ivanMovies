@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "title": "New releases",
       "playlist": [
         {
@@ -9,40 +9,40 @@
           "type": "video",
           "cover": "./images/covers/Alita-Battle-Angel.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 1
+          "id": "1"
         },
         {
           "title": "Captain Marvel",
           "type": "video",
           "cover": "./images/covers/Captain-Marvel.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 2
+          "id": "2"
         },
         {
           "title": "Wifi Ralph",
           "type": "video",
           "cover": "./images/covers/Wifi-Ralph.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 3
+          "id": "3"
         },
         {
           "title": "Creed 2",
           "type": "video",
           "cover": "./images/covers/Creed-2.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 4
+          "id": "4"
         },
         {
           "title": "Rocketman",
           "type": "video",
           "cover": "./images/covers/Rocketman.png",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 5
+          "id": "5"
         }
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Trends",
       "playlist": [
         {
@@ -50,40 +50,40 @@
           "type": "video",
           "cover": "./images/covers/Bohemian-Rhapsody.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 1
+          "id": "6"
         },
         {
           "title": "A Star is Born",
           "type": "video",
           "cover": "./images/covers/A-Star-Is-Born.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 2
+          "id": "7"
         },
         {
           "title": "The Favourite",
           "type": "video",
           "cover": "./images/covers/The-Favourite.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 3
+          "id": "8"
         },
         {
           "title": "Roma",
           "type": "video",
           "cover": "./images/covers/Roma.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 4
+          "id": "9"
         },
         {
           "title": "Green Book",
           "type": "video",
           "cover": "./images/covers/Green-Book.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 5
+          "id": "10"
         }
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Action and adventure",
       "playlist": [
         {
@@ -91,35 +91,35 @@
           "type": "video",
           "cover": "./images/covers/Fast-and-Furious.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 1
+          "id": "11"
         },
         {
           "title": "Black Panther",
           "type": "video",
           "cover": "./images/covers/Black-Panther.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 2
+          "id": "12"
         },
         {
           "title": "Avengers: Infinity War",
           "type": "video",
           "cover": "./images/covers/Avengers-Infinity-War.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 3
+          "id": "13"
         },
         {
           "title": "Ant-Man and the Wasp",
           "type": "video",
           "cover": "./images/covers/Ant-Man-and-the-Wasp.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 4
+          "id": "14"
         },
         {
           "title": "The Hunger Games",
           "type": "video",
           "cover": "./images/covers/The-Hunger-Games.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
-          "id": 5
+          "id": "15"
         }
       ]
     }
