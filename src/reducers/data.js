@@ -1,7 +1,7 @@
 function data (state, action) {
     switch (action.type) {
-        case 'ANYTHINGasdas':
-            return state
+        case 'SEARCH_MOVIE':
+            return console.log('Heeey I am an action')
         default:
             return state
     }
