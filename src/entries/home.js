@@ -4,6 +4,7 @@ import HomeContainer from '../pages/Home/HomeContainer.jsx'
 import data from '../api.json'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import reducer from '../reducers/data.js'
 
 const initialState = {
     data: {
@@ -11,7 +12,7 @@ const initialState = {
     }
 }
 const store = createStore(
-    (state) => state,
+    reducer,
     initialState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
