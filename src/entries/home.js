@@ -8,9 +8,9 @@ import reducer from '../reducers/data.js'
 
 const initialState = {
     data: {
-        ...data,
-        search: []
-    }
+        ...data
+    },
+    search: []
 }
 const store = createStore(
     reducer,

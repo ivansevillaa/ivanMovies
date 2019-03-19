@@ -31,6 +31,7 @@ class HomeContainer extends Component {
                     <Categories 
                         categories={this.props.categories}
                         handleOpenModal={this.handleOpenModal}
+                        search={this.props.search}
                     />
                     {
                         this.state.modalVisibility &&
@@ -56,7 +57,8 @@ function mapStateToProps(state, props) {
     console.log(state)
     console.log(props)
     return {
-        categories: state.data.categories
+        categories: state.data.categories,
+        search: state.search
     }
 }
 
