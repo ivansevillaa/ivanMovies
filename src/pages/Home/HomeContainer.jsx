@@ -54,8 +54,12 @@ class HomeContainer extends Component {
 }
 
 function mapStateToProps(state, props) {
+    console.log(state)
+    const categories = state.data.categories.map((item) => {
+        return state.data.entities.categories[item]
+    })
     return {
-        categories: state.data.categories,
+        categories: categories,
         search: state.search
     }
 }
