@@ -5,6 +5,8 @@ import data from '../api.json'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducer from '../reducers/data.js'
+import normalizedData from '../schemas/index.js'
+console.log(normalizedData)
 
 const initialState = {
     data: {
@@ -13,11 +15,10 @@ const initialState = {
     search: []
 }
 const store = createStore(
-    reducer,
+reducer,
     initialState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
-console.log(store.getState());
 
 const $homeContainer = document.getElementById('home-container')
 render(

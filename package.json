@@ -34,6 +34,9 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "@babel/runtime": "^7.3.4",
+    "install": "^0.12.2",
+    "normalizr": "^3.3.0",
+    "npm": "^6.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
