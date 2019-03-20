@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import Movie from '../Movie/Movie.jsx'
+import MovieContainer from '../Movie/MovieContainer.jsx'
 import './playlist.css'
 
 function Playlist(props) {
     return(
         <div className="Playlist">
             {
-                props.playlist.map((item) => {
-                    return <Movie handleOpenModal={props.handleOpenModal} {...item} key={item.id}/>
+                props.playlist.map((movieId) => {
+                    return <MovieContainer handleOpenModal={props.handleOpenModal} id={movieId} key={movieId}/>
                 })
             }
         </div>
