@@ -5,14 +5,20 @@ import { connect } from 'react-redux'
 class MovieContainer extends Component {
     render() {
         return(
-            <Movie {...this.props.data}/>
+            <Movie 
+                title={this.props.data.get('title')}
+                type={this.props.data.get('type')}
+                cover={this.props.data.get('cover')}
+                src={this.props.data.get('src')}
+                id={this.props.data.get('id')}
+            />
         )
     }
 }
 
 function mapStateToProps(state, props) {
     return {
-        data: state.data.entities.movie[props.id]
+        data: state.get('data').get('entities').get('movie').get(props.id)
     }
 }
 
