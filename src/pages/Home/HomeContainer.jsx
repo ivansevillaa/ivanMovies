@@ -10,18 +10,9 @@ import { connect } from 'react-redux'
 import { List as list } from 'immutable'
 
 class HomeContainer extends Component {
-    state = {
-        modalVisibility: false
-    }
-    handleOpenModal = (movie) => {
-        this.setState({
-            modalVisibility: true,
-            movie: movie
-        })
-    }
     handleCloseModal = (event) => {
-        this.setState({
-            modalVisibility: false
+        this.props.dispatch({
+            type: 'CLOSE_MODAL'
         })
     }
     render() {
@@ -31,19 +22,17 @@ class HomeContainer extends Component {
                     <Header />
                     <Categories 
                         categories={this.props.categories}
-                        handleOpenModal={this.handleOpenModal}
                         search={this.props.search}
                     />
                     {
-                        this.state.modalVisibility &&
+                        this.props.modal.get('visibility') &&
                         <ModalContainer>
                             <Modal
                                 handleCloseModal={this.handleCloseModal}
                             >
                                 <VideoPlayerContainer 
                                     autoplay={true}
-                                    src={this.state.movie.src}
-                                    title={this.state.movie.title}
+                                    id={this.props.modal.get('movieId')}
                                 />
                             </Modal>
                         </ModalContainer>
@@ -68,7 +57,8 @@ function mapStateToProps(state, props) {
     }
     return {
         categories: categories,
-        search: results
+        search: results,
+        modal: state.get('modal')
     }
 }
 

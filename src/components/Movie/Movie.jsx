@@ -19,7 +19,7 @@ class Movie extends Component {
     //     })
     // }
     handleClick = (event) => {
-        this.props.handleOpenModal(this.props)
+        this.props.openModal(this.props.id)
     }
     render() {
         return (

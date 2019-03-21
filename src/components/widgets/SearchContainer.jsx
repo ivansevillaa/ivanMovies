@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 class SearchContainer extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.input.value)
         this.props.dispatch({
             type: 'SEARCH_MOVIE',
             payload: {

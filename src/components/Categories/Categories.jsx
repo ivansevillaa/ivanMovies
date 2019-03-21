@@ -1,14 +1,15 @@
 import React from 'react'
 import Category from '../Category/Category.jsx'
 import './categories.css'
-import Movie from '../Movie/Movie.jsx'
+import MovieContainer from '../Movie/MovieContainer.jsx'
 
 function Categories(props) {
     return(
         <div className="Categories">
         {
             props.search.map((item) => {
-                return <Movie 
+                return <MovieContainer
+                            id={item.get('id')} 
                             key={item.get('id')} 
                             title={item.get('title')}
                             type={item.get('type')}
@@ -24,7 +25,6 @@ function Categories(props) {
                             key={item.get('id')} 
                             title={item.get('title')}
                             playlist={item.get('playlist')}
-                            handleOpenModal={props.handleOpenModal}
                         />
                     ) 
                 })

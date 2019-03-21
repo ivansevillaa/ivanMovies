@@ -10,6 +10,7 @@ import ProgessBar from './ProgessBar.jsx'
 import Spinner from './Spinner.jsx'
 import Volume from './Volume.jsx'
 import FullScreen from './FullScreen.jsx'
+import { connect } from 'react-redux'
 
 class VideoPlayerContainer extends Component {
     state = {
@@ -97,7 +98,7 @@ class VideoPlayerContainer extends Component {
                 setRef={this.setRef}
             >
                 <Title 
-                    title={this.props.title}
+                    title={this.props.movie.get('title')}
                 />
                 <Controls>
                     <PlayPause 
@@ -127,7 +128,7 @@ class VideoPlayerContainer extends Component {
                 />
                 <Video 
                     autoplay={this.props.autoplay}
-                    src={this.props.src}
+                    src={this.props.movie.get('src')}
                     pause={this.state.pause}
                     handleLoadedMetadata={this.handleLoadedMetadata}
                     handleTimeUpdate={this.handleTimeUpdate}
@@ -140,4 +141,10 @@ class VideoPlayerContainer extends Component {
     }
 }
 
-export default VideoPlayerContainer
+function mapStateToProps(state, props) {
+    return {
+        movie: state.get('data').get('entities').get('movie').get(props.id)
+    }
+}
+
+export default connect(mapStateToProps)(VideoPlayerContainer)
