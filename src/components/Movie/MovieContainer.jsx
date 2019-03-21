@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 import Movie from './Movie.jsx'
 import { connect } from 'react-redux'
+import { openModal } from '../../actions/index.js'
 
 class MovieContainer extends Component {
     openModal = (id) => {
-        this.props.dispatch({
-            type: 'OPEN_MODAL',
-            payload: {
-                movieId: id
-            }
-        })
+        this.props.dispatch(openModal(id))
     }
     render() {
         return(

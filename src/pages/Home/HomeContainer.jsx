@@ -8,12 +8,11 @@ import HandleErrorContainer from '../../components/errors/HandleErrorContainer.j
 import VideoPlayerContainer from '../../components/VideoPlayer/VideoPlayerContainer.jsx'
 import { connect } from 'react-redux'
 import { List as list } from 'immutable'
+import { closeModal } from '../../actions/index.js'
 
 class HomeContainer extends Component {
     handleCloseModal = (event) => {
-        this.props.dispatch({
-            type: 'CLOSE_MODAL'
-        })
+        this.props.dispatch(closeModal())
     }
     render() {
         return(
