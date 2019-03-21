@@ -7,6 +7,7 @@ import Modal from '../../components/widgets/Modal.jsx'
 import HandleErrorContainer from '../../components/errors/HandleErrorContainer.jsx'
 import VideoPlayerContainer from '../../components/VideoPlayer/VideoPlayerContainer.jsx'
 import { connect } from 'react-redux'
+import { List as list } from 'immutable'
 
 class HomeContainer extends Component {
     state = {
@@ -57,9 +58,17 @@ function mapStateToProps(state, props) {
     const categories = state.get('data').get('categories').map((categoryId) => {
         return state.get('data').get('entities').get('categories').get(categoryId)
     })
+    let results = list()
+    const search = state.get('data').get('search')
+    if (search) {
+        const movieList = state.get('data').get('entities').get('movie')
+        results = movieList.filter((item) => {
+            return item.get('title').toLowerCase().includes(search.toLowerCase())
+        }).toList()
+    }
     return {
         categories: categories,
-        search: state.get('data').get('search')
+        search: results
     }
 }
 
