@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Search from './Search.jsx'
 import { connect } from 'react-redux' 
-import { searchMovie } from '../../actions/index.js'
+import * as actions from '../../actions/index.js'
+import { bindActionCreators } from 'redux'
 
 class SearchContainer extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.dispatch(searchMovie(this.input.value))
+        this.props.actions.searchMovie(this.input.value)
     }
     setInputRef = (element) => {
         this.input = element
@@ -23,4 +24,10 @@ class SearchContainer extends Component {
     }
 }
 
-export default connect()(SearchContainer)
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
+}
+
+export default connect(null, mapDispatchToProps)(SearchContainer)

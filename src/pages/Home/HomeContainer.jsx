@@ -8,11 +8,12 @@ import HandleErrorContainer from '../../components/errors/HandleErrorContainer.j
 import VideoPlayerContainer from '../../components/VideoPlayer/VideoPlayerContainer.jsx'
 import { connect } from 'react-redux'
 import { List as list } from 'immutable'
-import { closeModal } from '../../actions/index.js'
+import * as actions from '../../actions/index.js'
+import { bindActionCreators } from 'redux'
 
 class HomeContainer extends Component {
     handleCloseModal = (event) => {
-        this.props.dispatch(closeModal())
+        this.props.actions.closeModal()
     }
     render() {
         return(
@@ -61,4 +62,10 @@ function mapStateToProps(state, props) {
     }
 }
 
-export default connect(mapStateToProps)(HomeContainer)
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer)

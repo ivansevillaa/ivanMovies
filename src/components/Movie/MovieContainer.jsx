@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import Movie from './Movie.jsx'
 import { connect } from 'react-redux'
-import { openModal } from '../../actions/index.js'
+import * as actions from '../../actions/index.js'
+import { bindActionCreators } from 'redux'
 
 class MovieContainer extends Component {
     openModal = (id) => {
-        this.props.dispatch(openModal(id))
+        this.props.actions.openModal(id)
     }
     render() {
         return(
@@ -27,5 +28,11 @@ function mapStateToProps(state, props) {
     }
 }
 
-export default connect(mapStateToProps)(MovieContainer)
+function mapDisparchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDisparchToProps)(MovieContainer)
 
