@@ -35,8 +35,8 @@ class Movie extends Component {
                         width={230}
                         height={130}
                     />
-                    <h3 className="Movie-title">{this.props.title}</h3>
                 </div>
+                <h3 className="Movie-title">{this.props.title}</h3>
             </div>
         )
     }
