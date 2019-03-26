@@ -1,9 +1,9 @@
 export function openModal(movieId) {
     return {
         type: 'OPEN_MODAL',
-            payload: {
-                movieId
-            }
+        payload: {
+            movieId
+        }
     }
 }
 
@@ -16,9 +16,8 @@ export function closeModal() {
 export function searchMovie(query) {
     return {
         type: 'SEARCH_MOVIE',
-            payload: {
-                query
-            }
+        payload: {
+            query
+        }
     }
 }
-

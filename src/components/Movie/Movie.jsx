@@ -9,6 +9,7 @@ class Movie extends Component {
     }
     handleClick = (event) => {
         this.props.openModal(this.props.id)
+        console.log(this.props.id)
     }
     handleAddRemoveClick = (event) => {
         this.setState({

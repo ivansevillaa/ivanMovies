@@ -1,6 +1,7 @@
 .Search {
     width: 300px;
     margin-right: 20px;
+    margin-left: 10px;
     display: flex;
     border: 1px solid white;
     padding: 10px;
