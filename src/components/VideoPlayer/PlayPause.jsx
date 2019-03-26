@@ -14,7 +14,8 @@ function PlayPause(props) {
                         <Play 
                             size={25}
                             color="white"
-                            />
+                            viewBox="0 0 32 32"
+                        />
                     </button>
                 :
                     <button
@@ -23,6 +24,7 @@ function PlayPause(props) {
                         <Pause 
                             size={25}
                             color="white"
+                            viewBox="0 0 32 32"
                         />
                     </button>
             }

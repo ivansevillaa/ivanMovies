@@ -1,5 +1,4 @@
 .Movie {
-    cursor: pointer;
     margin-right: 15px;
     display: inline-block;
     width: 230px;
@@ -7,8 +6,9 @@
 }
 
 .Movie-cover {
+    cursor: pointer;
     transition: .5s;
-    box-shadow: 0px 0 5px (255,255,255,.3);
+    /* box-shadow: 0px 0 5px rgba(255,255,255,.3); */
     height: 130px;
 }
 
@@ -25,5 +25,11 @@
     font-size: 16px;
     color: white;
     white-space: normal;
-    font-weight: 500
+    font-weight: 500;
+}
+
+.Movie-description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
 }

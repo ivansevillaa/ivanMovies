@@ -13,6 +13,7 @@ function Search(props) {
                     <SearchIcon 
                         color="white"
                         size={18}
+                        viewBox="0 0 32 32"
                     />
                 </i>
                 <input

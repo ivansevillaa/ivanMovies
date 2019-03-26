@@ -13,11 +13,13 @@ function Volume(props) {
                         <VolumeIcon 
                             color="white"
                             size={25}
+                            viewBox="0 0 32 32"
                         />
                     :
                         <Mute 
                             color="white"
                             size={25}
+                            viewBox="0 0 32 32"
                         />
 
 

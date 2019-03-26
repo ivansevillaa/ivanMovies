@@ -1,33 +1,27 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './movie.css'
+import AddRemove from '../widgets/AddRemove.jsx'
 
 class Movie extends Component {
-    // state = {
-    //     image: "./images/covers/Fast-and-Furious.jpg",
-    // }
-    // handleMouseOn = (event) => {
-    //     this.setState({
-    //         width: 330,
-    //         height: 200
-    //     })
-    // }
-    // handleMouseOut = (event) => {
-    //     this.setState({
-    //         width: 230,
-    //         height: 130
-    //     })
-    // }
+    state = {
+        inMyPlaylist: false,
+    }
     handleClick = (event) => {
         this.props.openModal(this.props.id)
     }
+    handleAddRemoveClick = (event) => {
+        this.setState({
+            inMyPlaylist: !this.state.inMyPlaylist,
+        })
+    }
     render() {
         return (
-            <div 
-                className="Movie"
-                onClick={this.handleClick}
-            >
-                <div className="Movie-cover">
+            <div className="Movie">
+                <div 
+                    className="Movie-cover"
+                    onClick={this.handleClick}
+                >
                     <img 
                         className="Movie-image"
                         src={this.props.cover}
@@ -36,7 +30,13 @@ class Movie extends Component {
                         height={130}
                     />
                 </div>
-                <h3 className="Movie-title">{this.props.title}</h3>
+                <div className="Movie-description">
+                    <h3 className="Movie-title">{this.props.title}</h3>
+                    <AddRemove 
+                        inMyPlaylist={this.state.inMyPlaylist}
+                        handleAddRemoveClick={this.handleAddRemoveClick}
+                    />
+                </div>
             </div>
         )
     }

@@ -11,6 +11,7 @@ function FullScreen(props) {
             <FullScreenIcon 
                 size={25}
                 color="white"
+                viewBox="0 0 32 32"
             />
         </div>
     )
